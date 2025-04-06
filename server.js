@@ -7,8 +7,13 @@
 
 const express = require('express')
 
-const app = express(); 
+const studentsRoutes = require('./src/routes/student')
 
-const PORT = 3001; 
+const app = express(); 
+app.use(express.json())
+
+app.use('/api/students', studentsRoutes)
+
+const PORT = 3000; 
 
 app.listen(PORT)

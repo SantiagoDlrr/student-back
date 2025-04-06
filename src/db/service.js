@@ -3,8 +3,7 @@
 
 class FakeService{
     constructor(){
-        super()
-        this.students = new Map()
+        this.students = new Map();
 
         const dummyStudents = [
             { matricula: '001', nombre: 'Ana Torres', calificacion: 90, deuda: 0 },
@@ -15,14 +14,14 @@ class FakeService{
           ];
 
         dummyStudents.forEach((student) => {
-            this.students.set(student.matricula, student)
+            this.students.set(student.matricula, student);
         })
     }
 
     async getAllStudents () {
-        return Array.from(this.students.value)
+        return Array.from(this.students.values());
     }
 
-    
-
 }
+
+module.exports = FakeService;
