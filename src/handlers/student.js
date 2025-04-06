@@ -7,7 +7,7 @@ class StudentHttpHandler {
     constructor(studentController) {
         this.studentController = studentController; 
     }
-    
+
     async getAllStudents(req,res) { 
         try {
             const customers = await this.studentController.getAll(); 
